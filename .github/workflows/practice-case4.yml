@@ -1,0 +1,19 @@
+name: Compile practice case 4
+
+on:
+  push:
+    branches: [practice-lamoda-tech-2026]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Configure
+        run: cmake -S practice-lamoda-tech/case4_cpp -B build-case4 -DCMAKE_BUILD_TYPE=Debug
+      - name: Compile test objects
+        run: cmake --build build-case4 --target case4_test_objects --parallel 2
