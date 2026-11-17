@@ -34,7 +34,7 @@ ctest --test-dir case4_cpp/build-run -C Debug --output-on-failure
 
 ## Статус и ссылка
 
-Во время подготовки проекта в доступном PATH не обнаружены `cmake`, `ctest` и компиляторы `g++`, `clang++`, `cl`. Поиск в стандартных каталогах Visual Studio, LLVM, MSYS2, MinGW, программах пользователя и кэше Codex также не обнаружил CMake, указанные компиляторы или `gtest.h`. `wsl.exe` выдал справку по установке вместо списка дистрибутивов. Компиляция и запуск не выполнены. Отсутствие реализации является отдельным основанием, по которому запуск поведенческих тестов невозможен. Успешность и количество пройденных тестов не утверждаются.
+Локально CMake и компилятор не обнаружены. Настройка CMake и компиляция тестового объектного файла успешно выполнены в [GitHub Actions](https://github.com/TimeurGuliev/Unyk/actions/runs/44157008571), коммит `1db6783cec52fff595eb272f08c10c21f1edeba8`. Поведенческие тесты не запускались: для этого необходима реализация структур и фабрик. Успешность и количество пройденных тестов не утверждаются.
 
-GitHub: https://github.com/TimeurGuliev/Unyk/tree/practice-lamoda-tech-2026/practice-lamoda-tech/case4_cpp
+GitHub: https://github.com/TimeurGuliev/Unyk/tree/a1bef77404696eb0dc503e2b3aed2b8d9262bdce/practice-lamoda-tech/case4_cpp (зафиксированная версия проекта).
 
